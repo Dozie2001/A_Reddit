@@ -8,7 +8,7 @@ def make_app():
     db.init_app(app)
     migrate.init_app(app)
 
-    from api.controller.user_paths import user_router
+    from api.routers.user_paths import user_router
 
     app.register_blueprint(user_router)
     return app
