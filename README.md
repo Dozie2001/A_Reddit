@@ -1,2 +1,2 @@
 # A_Reddit
-A backend Clone of Reddit made with Python Flask
+A Clone of Reddit made with Flask and React
