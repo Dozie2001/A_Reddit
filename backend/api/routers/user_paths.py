@@ -11,7 +11,7 @@ def get_current_user():
 def register_user():
     username = validate_username(request.json.get('username'))
     email = validate_email(request.json.get('email'))
-    password = validate_password(request.join.get('password'))
+    password = validate_password(request.json.get("password"))
 
     result = user_service.create_user(username, email, password)
     return {'success': result}
@@ -21,5 +21,6 @@ def login_user():
    email = validate_email(request.json.get('email'))
    password = validate_password(request.json.get('password'))
    user_id = user_service.authenticate_user(email, password)
+
 
    return {'Success': True}

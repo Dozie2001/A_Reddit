@@ -2,14 +2,13 @@ from werkzeug.exceptions import BadRequest
 import re
 
 
-EMAIL_REGEX = r'\b[A-Za-z0-9]+[.-_])*\
-                [A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,}\b'
+EMAIL_REGEX = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"
 
 
 def validate_username(username: str) -> str:
     if not username:
         raise BadRequest('Username not provided')
-    if len(username) > 30:
+    if len(username) > 30 or len(username) < 3:
         raise BadRequest("Username length must be between 3 and 30 characters")
 
     return username
