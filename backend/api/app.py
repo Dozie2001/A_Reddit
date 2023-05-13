@@ -2,10 +2,11 @@ from flask import Flask
 from api.extensions import db, migrate, bcrypt
 from api.config import AppConfig
 
+
 def make_app():
     app = Flask(__name__)
     app.config.from_object(AppConfig)
-    
+
     # Initialising App
     db.init_app(app)
     bcrypt.init_app(app)
