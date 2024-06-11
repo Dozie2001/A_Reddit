@@ -1,7 +1,3 @@
-# A_Reddit
-This is a reddit clone.It is built using Flask for the Backend and React for the front end
-<br>
-MySQL is used for the databse
 
 
 # **How to run**
